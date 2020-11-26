@@ -1,0 +1,71 @@
+@font-face {
+    font-family: SpaceMono-Bold;
+    src: url('/assets/fonts/SpaceMono-Bold.ttf');
+  }
+
+  @font-face {
+    font-family: SpaceMono-Regular;
+    src: url('/assets/fonts/SpaceMono-Regular.ttf');
+  }
+
+.menu-btn{
+    padding-left: 35px;
+}
+
+.header{
+    background-color: #4E105C;
+    min-height: 134px;
+    background-image: url('/assets/triangle.svg'), url('/assets/circle.svg');
+    background-repeat: no-repeat;
+    background-position:  76% 100%, 75% 140%;
+
+    @media only screen and (max-width: 414px) {
+        background-position:  115% 100%, 175% 400%;
+        margin-bottom: 15px;
+      }
+
+    .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 134px;
+        font-size: 44px;
+        line-height: 65px;
+        color: #fff;
+        font-family: SpaceMono-Regular;
+
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 134px;
+            font-size: 44px;
+            line-height: 65px;
+            color: #fff;
+            font-family: SpaceMono-Regular;
+
+            @media only screen and (max-width: 414px) {
+                display: block;
+                text-align: center;
+              }
+
+        }
+
+        .gradient-text{
+            font-size: 44px;
+            background: -o-linear-gradient(right, #F66F07, #A502B9);
+            background: -moz-linear-gradient(right, #F66F07, #A502B9);
+            background: linear-gradient(to right, #F66F07,  #A502B9); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: SpaceMono-Bold;
+            margin-left: 25px;
+            margin-right: 25px;
+
+            @media only screen and (max-width: 414px) {
+                display: block;
+              }
+        }
+
+    }
+}

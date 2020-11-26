@@ -1,0 +1,44 @@
+<div class="podcast-holder" *ngFor="let podcast of podcasts; let i = index">
+
+    <div class="circle">
+        <div class="number">
+            {{i+1}}
+        </div>
+    </div>
+
+
+    <mat-card class="podcast-card">
+
+        <div class="podcast-image"><img src="{{podcast.image}}" alt="podcast image"></div>
+
+        <div class="podcast-content">
+        
+            <mat-card-title class="podcast-title">
+                {{podcast.title}}
+            </mat-card-title>
+
+            <mat-card-subtitle class="subtitle">
+                by <span class="authors">{{podcast.publisher}}</span>
+            </mat-card-subtitle>
+    
+            <div class="episodes">
+                {{podcast.total_episodes}} episodes
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="podcast-links">
+                <a href="{{podcast.itunes_id}}"> <img src="assets/apple.svg" alt="itunes logo"> itunes</a>
+                <a href="{{podcast.website}}"><img src="assets/link.svg" alt="web logo">  web</a>
+                <a href="{{podcast.rss}}"><img src="assets/rss.svg" alt="rss logo">  rss</a>
+            </div>
+
+        </div>
+
+        <div class="podcast-description">
+
+                {{podcast.description | slice:0:200 }}
+
+        </div>
+    </mat-card>
+  </div>
